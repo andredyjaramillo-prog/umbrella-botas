@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aura — Umbrella Footwear | El cuero que se siente antes de tocarlo</title>
+  <meta name="description" content="Botas Aura. 100% cuero ante premium. 5 colores. Contraentrega en toda Colombia."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+
+  <!-- META PIXEL — reemplaza TU_PIXEL_ID -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','1481522509925168');fbq('track','PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1481522509925168&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    /* ── RESET ── */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;background:#080806;color:#F0E8D8;overflow-x:hidden;line-height:1.6}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    /* ── TOKENS ── */
+    :root{
+      --gold:#C9A84C;
+      --gold2:#E8C96A;
+      --gold3:#8B6B2A;
+      --bg:#080806;
+      --bg2:#0F0E0B;
+      --bg3:#161410;
+      --cream:#F0E8D8;
+      --muted:#9A9080;
+      --wa:#25D366;
+      --wa2:#1DA851;
+      --r:14px;
+    }
+
+    /* ── TOPBAR ── */
+    .topbar{
+      background:linear-gradient(90deg,var(--bg2),#1A1610,var(--bg2));
+      border-bottom:1px solid rgba(201,168,76,0.2);
+      text-align:center;padding:10px 16px;
+      font-family:'Inter',sans-serif;font-size:12px;letter-spacing:1.5px;
+      text-transform:uppercase;color:var(--muted);
+    }
+    .topbar strong{color:var(--gold)}
+
+    /* ── HEADER ── */
+    .site-header{
+      position:sticky;top:0;z-index:100;
+      background:rgba(8,8,6,0.92);
+      backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(201,168,76,0.15);
+      padding:16px 24px;
+      display:flex;align-items:center;justify-content:center;
+    }
+    .logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-weight:600;letter-spacing:4px;text-transform:uppercase;
+      color:var(--cream);
+    }
+    .logo span{color:var(--gold)}
+
+    /* ── HERO ── */
+    .hero{
+      min-height:100svh;
+      background:var(--bg);
+      display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      text-align:center;
+      padding:60px 24px 80px;
+      position:relative;overflow:hidden;
+    }
+    /* fondo con gradiente radial dorado */
+    .hero::before{
+      content:'';position:absolute;inset:0;
+      background:
+        radial-gradient(ellipse 60% 40% at 50% 20%, rgba(201,168,76,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 30% 20% at 80% 80%, rgba(201,168,76,0.06) 0%, transparent 60%);
+      pointer-events:none;
+    }
+    /* línea decorativa superior */
+    .hero-line{
+      width:1px;height:60px;
+      background:linear-gradient(to bottom,transparent,var(--gold),transparent);
+      margin:0 auto 32px;
+    }
+    .hero-eyebrow{
+      font-family:'Inter',sans-serif;
+      font-size:11px;font-weight:500;letter-spacing:4px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:20px;
+    }
+    .hero-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(72px,16vw,120px);
+      font-weight:300;letter-spacing:12px;text-transform:uppercase;
+      line-height:0.95;
+      background:linear-gradient(135deg,var(--cream) 0%,var(--gold2) 45%,var(--cream) 100%);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+      margin-bottom:16px;
+    }
+    .hero-sub{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(16px,4vw,22px);font-weight:300;font-style:italic;
+      color:var(--muted);letter-spacing:1px;margin-bottom:40px;max-width:400px;
+    }
+    .hero-sub em{color:var(--gold);font-style:italic}
+
+    /* precio hero */
+    .hero-precio{
+      display:flex;flex-direction:column;align-items:center;gap:4px;
+      margin-bottom:36px;
+    }
+    .hero-precio-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted)}
+    .hero-precio-valor{
+      font-family:'Cormorant Garamond',serif;
+      font-size:42px;font-weight:600;color:var(--gold2);line-height:1;
+    }
+    .hero-precio-alt{font-size:13px;color:var(--muted)}
+
+    /* puntos de color */
+    .color-dots{display:flex;justify-content:center;gap:12px;margin-bottom:36px}
+    .cdot{
+      width:24px;height:24px;border-radius:50%;
+      border:1.5px solid rgba(201,168,76,0.3);
+      cursor:pointer;transition:transform .25s,border-color .25s,box-shadow .25s;
+    }
+    .cdot:hover,.cdot.on{transform:scale(1.3);border-color:var(--gold2);box-shadow:0 0 10px rgba(201,168,76,0.5)}
+    .cdot-negro  {background:#1A1A1A}
+    .cdot-gris   {background:#8A8A8A}
+    .cdot-cafe   {background:#7B4F2E}
+    .cdot-kaki   {background:#8B8455}
+    .cdot-mostaza{background:#C9A84C}
+
+    /* CTA hero */
+    .btn-gold{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));
+      color:#080806;font-size:13px;font-weight:700;letter-spacing:2px;
+      text-transform:uppercase;padding:17px 36px;border-radius:50px;
+      box-shadow:0 8px 32px rgba(201,168,76,0.3);
+      transition:transform .2s,box-shadow .2s;border:none;cursor:pointer;
+      font-family:'Inter',sans-serif;width:100%;max-width:320px;
+    }
+    .btn-gold:active{transform:scale(0.97);box-shadow:0 4px 16px rgba(201,168,76,0.2)}
+    .hero-garantia{
+      margin-top:16px;font-size:12px;color:var(--muted);letter-spacing:0.5px;
+    }
+
+    /* partículas decorativas */
+    .particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .p{
+      position:absolute;width:2px;height:2px;border-radius:50%;
+      background:var(--gold);opacity:0;
+      animation:float var(--dur,8s) var(--del,0s) infinite ease-in-out;
+    }
+    @keyframes float{
+      0%{opacity:0;transform:translateY(100%) scale(0)}
+      10%{opacity:0.6}
+      90%{opacity:0.2}
+      100%{opacity:0;transform:translateY(-20vh) scale(1.5)}
+    }
+
+    /* ── ESENCIA ── */
+    .esencia{
+      padding:80px 24px;
+      background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%);
+      text-align:center;
+    }
+    .section-eyebrow{
+      font-size:10px;letter-spacing:4px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:14px;font-family:'Inter',sans-serif;
+    }
+    .section-title{
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(32px,7vw,52px);font-weight:300;
+      color:var(--cream);line-height:1.15;margin-bottom:20px;
+    }
+    .section-title em{color:var(--gold);font-style:italic}
+    .section-body{
+      font-size:15px;color:var(--muted);max-width:480px;
+      margin:0 auto 48px;line-height:1.8;
+    }
+
+    /* pilares */
+    .pilares{
+      display:grid;grid-template-columns:1fr 1fr 1fr;
+      gap:2px;max-width:500px;margin:0 auto;
+    }
+    .pilar{
+      background:var(--bg3);padding:28px 16px;
+      border:1px solid rgba(201,168,76,0.1);
+      transition:border-color .3s,background .3s;
+    }
+    .pilar:hover{border-color:rgba(201,168,76,0.35);background:#1A1610}
+    .pilar:first-child{border-radius:var(--r) 0 0 var(--r)}
+    .pilar:last-child{border-radius:0 var(--r) var(--r) 0}
+    .pilar-num{
+      font-family:'Cormorant Garamond',serif;
+      font-size:36px;font-weight:300;color:var(--gold);
+      line-height:1;margin-bottom:8px;
+    }
+    .pilar-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+
+    /* ── COLORES ── */
+    .colores-section{
+      padding:80px 24px;
+      background:var(--bg2);
+    }
+    .colores-grid{
+      display:grid;grid-template-columns:1fr 1fr;
+      gap:12px;max-width:440px;margin:32px auto 0;
+    }
+    .color-tile{
+      border-radius:var(--r);overflow:hidden;
+      border:1px solid rgba(201,168,76,0.1);
+      cursor:pointer;
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+      position:relative;
+    }
+    .color-tile:hover{
+      transform:translateY(-4px);
+      border-color:rgba(201,168,76,0.5);
+      box-shadow:0 12px 40px rgba(0,0,0,0.5);
+    }
+    .tile-swatch{
+      height:110px;display:flex;align-items:flex-end;
+      padding:12px;position:relative;overflow:hidden;
+    }
+    .tile-swatch::after{
+      content:'';position:absolute;inset:0;
+      background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,0.5) 100%);
+    }
+    .t-negro  {background:#1A1A1A}
+    .t-gris   {background:linear-gradient(135deg,#6A6A6A,#9A9A9A)}
+    .t-cafe   {background:linear-gradient(135deg,#5C3820,#8B5E3C)}
+    .t-kaki   {background:linear-gradient(135deg,#6B6540,#9A9060)}
+    .t-mostaza{background:linear-gradient(135deg,#A07820,#D4A843)}
+    .tile-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-weight:600;color:#fff;
+      position:relative;z-index:1;letter-spacing:1px;
+    }
+    .tile-angle{
+      padding:12px 14px 14px;
+      background:var(--bg3);
+      font-size:12px;color:var(--muted);font-style:italic;
+      font-family:'Cormorant Garamond',serif;
+    }
+    .color-tile.wide{grid-column:1/-1}
+    .color-tile.wide .tile-swatch{height:90px}
+
+    /* ── OFERTA ── */
+    .oferta-section{
+      padding:80px 24px;
+      background:linear-gradient(180deg,var(--bg2) 0%,var(--bg) 100%);
+      text-align:center;
+    }
+    .oferta-grid{
+      display:flex;flex-direction:column;gap:14px;
+      max-width:420px;margin:32px auto;
+    }
+    .oferta-tile{
+      border:1px solid rgba(201,168,76,0.15);
+      border-radius:var(--r);padding:24px 20px;
+      background:var(--bg3);position:relative;
+      transition:border-color .3s;text-align:left;
+    }
+    .oferta-tile:hover{border-color:rgba(201,168,76,0.4)}
+    .oferta-tile.star{
+      border-color:var(--gold3);
+      background:linear-gradient(135deg,#0F0D08,#1A160C);
+    }
+    .oferta-tag{
+      position:absolute;top:-11px;left:20px;
+      background:linear-gradient(90deg,var(--gold3),var(--gold));
+      color:#080806;font-size:10px;font-weight:700;letter-spacing:2px;
+      text-transform:uppercase;padding:4px 14px;border-radius:20px;
+      font-family:'Inter',sans-serif;
+    }
+    .oferta-tile-label{
+      font-size:10px;letter-spacing:3px;text-transform:uppercase;
+      color:var(--muted);margin-bottom:8px;font-family:'Inter',sans-serif;
+    }
+    .oferta-tile-precio{
+      font-family:'Cormorant Garamond',serif;
+      font-size:40px;font-weight:600;color:var(--gold2);line-height:1;
+      margin-bottom:6px;
+    }
+    .oferta-tile-desc{font-size:13px;color:var(--muted);line-height:1.6}
+    .oferta-tile-desc strong{color:var(--cream)}
+
+    /* ── FORMULARIO ── */
+    .pedido-section{
+      padding:80px 24px;
+      background:var(--bg);
+      border-top:1px solid rgba(201,168,76,0.15);
+    }
+    .form-wrap{
+      max-width:460px;margin:32px auto 0;
+      background:var(--bg3);
+      border:1px solid rgba(201,168,76,0.2);
+      border-radius:20px;padding:32px 24px;
+    }
+
+    .form-group{margin-bottom:18px}
+    .form-group label{
+      display:block;font-size:10px;font-weight:600;
+      letter-spacing:2px;text-transform:uppercase;
+      color:var(--muted);margin-bottom:8px;
+      font-family:'Inter',sans-serif;
+    }
+    .form-group label span{color:var(--gold)}
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+      width:100%;padding:14px 16px;
+      background:rgba(255,255,255,0.04);
+      border:1px solid rgba(201,168,76,0.2);
+      border-radius:10px;
+      font-size:15px;font-family:'Inter',sans-serif;
+      color:var(--cream);
+      transition:border-color .2s,box-shadow .2s;
+      -webkit-appearance:none;appearance:none;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder{color:rgba(154,144,128,0.5)}
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus{
+      outline:none;
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(201,168,76,0.1);
+    }
+    .form-group select option{background:#1A160C;color:var(--cream)}
+    .form-group textarea{resize:vertical;min-height:72px}
+
+    .sel-wrap{position:relative}
+    .sel-wrap::after{
+      content:'▾';position:absolute;right:14px;top:50%;
+      transform:translateY(-50%);color:var(--gold);font-size:14px;pointer-events:none;
+    }
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    /* resumen */
+    .resumen{
+      background:rgba(201,168,76,0.06);
+      border:1px solid rgba(201,168,76,0.15);
+      border-radius:10px;padding:16px;margin-bottom:20px;
+      font-size:13px;
+    }
+    .resumen-titulo{
+      font-size:9px;letter-spacing:3px;text-transform:uppercase;
+      color:var(--gold);margin-bottom:12px;font-family:'Inter',sans-serif;
+    }
+    .res-row{
+      display:flex;justify-content:space-between;
+      color:var(--muted);margin-bottom:5px;
+    }
+    .res-row.tot{
+      margin-top:10px;padding-top:10px;
+      border-top:1px solid rgba(201,168,76,0.15);
+      font-weight:700;font-size:16px;
+    }
+    .res-row.tot span:last-child{color:var(--gold2)}
+    .res-row span:last-child{color:var(--cream)}
+
+    /* error */
+    .field-error{color:#E05050;font-size:11px;margin-top:5px;display:none}
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea{border-color:#E05050}
+    .form-group.error .field-error{display:block}
+
+    /* botón pedido */
+    .btn-order{
+      width:100%;padding:18px;border:none;cursor:pointer;border-radius:50px;
+      background:linear-gradient(135deg,var(--gold3),var(--gold),var(--gold2));
+      color:#080806;font-size:15px;font-weight:700;
+      font-family:'Inter',sans-serif;letter-spacing:1px;
+      display:flex;align-items:center;justify-content:center;gap:10px;
+      box-shadow:0 8px 32px rgba(201,168,76,0.25);
+      transition:transform .2s,box-shadow .2s;
+    }
+    .btn-order:active{transform:scale(0.97)}
+    .form-nota{
+      text-align:center;font-size:12px;color:var(--muted);
+      margin-top:14px;line-height:1.7;
+    }
+    .form-nota strong{color:var(--cream)}
+
+    /* separador dorado */
+    .gold-divider{
+      display:flex;align-items:center;gap:16px;
+      max-width:300px;margin:0 auto 28px;
+    }
+    .gold-divider::before,.gold-divider::after{
+      content:'';flex:1;height:1px;
+      background:linear-gradient(90deg,transparent,var(--gold3),transparent);
+    }
+    .gold-divider-icon{font-size:14px;color:var(--gold);letter-spacing:4px}
+
+    /* ── GARANTÍAS ── */
+    .garantias-section{
+      padding:72px 24px;
+      background:var(--bg2);
+      text-align:center;
+    }
+    .garantias-grid{
+      display:flex;flex-direction:column;gap:0;
+      max-width:420px;margin:32px auto 0;
+      border:1px solid rgba(201,168,76,0.15);
+      border-radius:var(--r);overflow:hidden;
+    }
+    .garantia-item{
+      display:flex;align-items:flex-start;gap:16px;
+      padding:20px 20px;
+      border-bottom:1px solid rgba(201,168,76,0.1);
+      text-align:left;
+      background:var(--bg3);
+      transition:background .2s;
+    }
+    .garantia-item:last-child{border-bottom:none}
+    .garantia-item:hover{background:#1A160C}
+    .garantia-icon{
+      width:44px;height:44px;border-radius:10px;
+      background:rgba(201,168,76,0.1);
+      border:1px solid rgba(201,168,76,0.2);
+      display:flex;align-items:center;justify-content:center;
+      font-size:18px;flex-shrink:0;
+    }
+    .garantia-text h3{
+      font-family:'Cormorant Garamond',serif;
+      font-size:17px;font-weight:600;color:var(--cream);margin-bottom:3px;
+    }
+    .garantia-text p{font-size:13px;color:var(--muted);line-height:1.6}
+
+    /* ── TESTIMONIOS ── */
+    .testimonios-section{padding:72px 24px;background:var(--bg)}
+    .testi-grid{
+      display:flex;flex-direction:column;gap:14px;
+      max-width:440px;margin:32px auto 0;
+    }
+    .testi{
+      background:var(--bg3);
+      border:1px solid rgba(201,168,76,0.12);
+      border-radius:var(--r);padding:22px;
+    }
+    .testi-stars{color:var(--gold);font-size:14px;margin-bottom:10px;letter-spacing:3px}
+    .testi-text{
+      font-family:'Cormorant Garamond',serif;
+      font-size:17px;font-style:italic;color:var(--cream);
+      line-height:1.7;margin-bottom:12px;
+    }
+    .testi-autor{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+    .testi-ciudad{font-size:11px;color:var(--gold);letter-spacing:1px}
+
+    /* ── CTA FINAL ── */
+    .cta-section{
+      padding:100px 24px;
+      background:linear-gradient(180deg,var(--bg) 0%,#0A0900 100%);
+      text-align:center;position:relative;overflow:hidden;
+    }
+    .cta-section::before{
+      content:'AURA';
+      position:absolute;
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(120px,30vw,220px);
+      font-weight:700;letter-spacing:20px;
+      color:rgba(201,168,76,0.04);
+      top:50%;left:50%;transform:translate(-50%,-50%);
+      pointer-events:none;white-space:nowrap;
+    }
+    .cta-section .section-title{margin-bottom:12px}
+    .cta-sub-text{font-size:15px;color:var(--muted);margin-bottom:36px;max-width:340px;margin-left:auto;margin-right:auto}
+
+    /* ── FOOTER ── */
+    footer{
+      background:#050504;
+      border-top:1px solid rgba(201,168,76,0.1);
+      text-align:center;padding:28px 20px;
+    }
+    .footer-logo{
+      font-family:'Cormorant Garamond',serif;
+      font-size:18px;font-weight:600;letter-spacing:4px;text-transform:uppercase;
+      color:var(--muted);margin-bottom:8px;
+    }
+    .footer-logo span{color:var(--gold)}
+    .footer-text{font-size:11px;color:rgba(154,144,128,0.5);letter-spacing:0.5px}
+
+    /* ── FLOTANTE WA ── */
+    .wa-float{
+      position:fixed;bottom:24px;right:20px;z-index:999;
+      background:var(--wa);color:#fff;
+      width:56px;height:56px;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 4px 20px rgba(37,211,102,0.5);
+      transition:transform .2s;
+    }
+    .wa-float:active{transform:scale(0.92)}
+    .wa-pulse{
+      position:absolute;inset:-5px;border-radius:50%;
+      border:2px solid var(--wa);opacity:0;
+      animation:wapulse 2s infinite;
+    }
+    @keyframes wapulse{0%{opacity:.8;transform:scale(1)}100%{opacity:0;transform:scale(1.5)}}
+
+    /* ── STICKY BOTTOM ── */
+    .sticky{
+      position:fixed;bottom:0;left:0;right:0;z-index:998;
+      background:rgba(8,8,6,0.95);
+      backdrop-filter:blur(12px);
+      border-top:1px solid rgba(201,168,76,0.2);
+      padding:12px 16px;
+      display:flex;align-items:center;justify-content:space-between;gap:12px;
+      box-shadow:0 -8px 32px rgba(0,0,0,0.6);
+    }
+    .sticky-p{display:flex;flex-direction:column;line-height:1.2}
+    .sticky-p strong{
+      font-family:'Cormorant Garamond',serif;
+      font-size:22px;font-weight:600;color:var(--gold2);
+    }
+    .sticky-p span{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
+    .sticky-btn{
+      flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+      background:linear-gradient(90deg,var(--gold3),var(--gold));
+      color:#080806;font-size:13px;font-weight:700;
+      letter-spacing:1.5px;text-transform:uppercase;
+      padding:14px 16px;border-radius:50px;
+      font-family:'Inter',sans-serif;
+      transition:opacity .2s;
+    }
+    .sticky-btn:active{opacity:.85}
+    .spacer{height:72px}
+
+    /* ── ANIMACIONES SCROLL ── */
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    Envío Colombia · <strong>Contraentrega</strong> · Pagas cuando recibes
+  </div>
+
+  <header class="site-header">
+    <div class="logo">Umbrella <span>Footwear</span></div>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero">
+    <!-- partículas -->
+    <div class="particles">
+      <div class="p" style="left:15%;--dur:9s;--del:0s"></div>
+      <div class="p" style="left:30%;--dur:12s;--del:2s"></div>
+      <div class="p" style="left:50%;--dur:7s;--del:1s"></div>
+      <div class="p" style="left:65%;--dur:10s;--del:3s"></div>
+      <div class="p" style="left:80%;--dur:8s;--del:0.5s"></div>
+      <div class="p" style="left:45%;--dur:11s;--del:4s"></div>
+      <div class="p" style="left:22%;--dur:9s;--del:2.5s"></div>
+      <div class="p" style="left:72%;--dur:13s;--del:1.5s"></div>
+    </div>
+
+    <div class="hero-line"></div>
+    <div class="hero-eyebrow">Umbrella Footwear — Colección 2025</div>
+    <h1 class="hero-title">AURA</h1>
+    <p class="hero-sub">El cuero que se siente<br/><em>antes de tocarlo.</em></p>
+
+    <div class="hero-precio">
+      <div class="hero-precio-label">Oferta 2 pares</div>
+      <div class="hero-precio-valor">$270.000</div>
+      <div class="hero-precio-alt">1 par desde $140.000 · 5 colores</div>
+    </div>
+
+    <div class="color-dots">
+      <div class="cdot cdot-negro on" title="Negro"></div>
+      <div class="cdot cdot-gris"     title="Gris"></div>
+      <div class="cdot cdot-cafe"     title="Café"></div>
+      <div class="cdot cdot-kaki"     title="Kaki"></div>
+      <div class="cdot cdot-mostaza"  title="Mostaza"></div>
+    </div>
+
+    <a class="btn-gold" href="#pedir" onclick="fbq('track','Contact')">
+      Descubrir Aura
+    </a>
+    <div class="hero-garantia">Sin tarjeta · Pagas al recibir</div>
+  </section>
+
+  <!-- ══ ESENCIA ══ -->
+  <section class="esencia reveal">
+    <div class="section-eyebrow">La esencia</div>
+    <h2 class="section-title">Más que una bota.<br/><em>Una presencia.</em></h2>
+    <p class="section-body">
+      Aura nace del cuero ante más selecto. Cada par es unisex, diseñado para quienes saben que el estilo no se grita — se siente en cada paso.
+    </p>
+    <div class="gold-divider"><div class="gold-divider-icon">✦ ✦ ✦</div></div>
+    <div class="pilares">
+      <div class="pilar">
+        <div class="pilar-num">100%</div>
+        <div class="pilar-label">Cuero Ante</div>
+      </div>
+      <div class="pilar">
+        <div class="pilar-num">5</div>
+        <div class="pilar-label">Colores</div>
+      </div>
+      <div class="pilar">
+        <div class="pilar-num">34–44</div>
+        <div class="pilar-label">Tallas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ COLORES ══ -->
+  <section class="colores-section reveal">
+    <div style="text-align:center">
+      <div class="section-eyebrow">La paleta</div>
+      <h2 class="section-title">Elige tu <em>Aura</em></h2>
+    </div>
+    <div class="colores-grid">
+      <div class="color-tile" onclick="selColor('Negro')">
+        <div class="tile-swatch t-negro"><div class="tile-name">Negro</div></div>
+        <div class="tile-angle">Estatus &amp; noche</div>
+      </div>
+      <div class="color-tile" onclick="selColor('Gris')">
+        <div class="tile-swatch t-gris"><div class="tile-name">Gris</div></div>
+        <div class="tile-angle">Equilibrio &amp; calma</div>
+      </div>
+      <div class="color-tile" onclick="selColor('Café')">
+        <div class="tile-swatch t-cafe"><div class="tile-name">Café</div></div>
+        <div class="tile-angle">Tierra &amp; raíz</div>
+      </div>
+      <div class="color-tile" onclick="selColor('Kaki')">
+        <div class="tile-swatch t-kaki"><div class="tile-name">Kaki</div></div>
+        <div class="tile-angle">Aventura &amp; viento</div>
+      </div>
+      <div class="color-tile wide" onclick="selColor('Mostaza')">
+        <div class="tile-swatch t-mostaza"><div class="tile-name">Mostaza</div></div>
+        <div class="tile-angle">Fuego &amp; destino</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ OFERTA ══ -->
+  <section class="oferta-section reveal">
+    <div class="section-eyebrow">La oferta</div>
+    <h2 class="section-title">Sin riesgo.<br/><em>Sin tarjeta.</em></h2>
+    <div class="oferta-grid">
+      <div class="oferta-tile star">
+        <div class="oferta-tag">✦ Más elegida</div>
+        <div class="oferta-tile-label">2 pares Aura</div>
+        <div class="oferta-tile-precio">$270.000</div>
+        <div class="oferta-tile-desc"><strong>$135.000 por par.</strong> 2 colores. 2 tallas si deseas.</div>
+      </div>
+      <div class="oferta-tile">
+        <div class="oferta-tile-label">1 par Aura</div>
+        <div class="oferta-tile-precio">$140.000</div>
+        <div class="oferta-tile-desc"><strong>Un par.</strong> Tu color. Envío a toda Colombia.</div>
+      </div>
+    </div>
+    <a class="btn-gold" href="#pedir" onclick="fbq('track','InitiateCheckout')" style="margin:0 auto">
+      Completar mi pedido
+    </a>
+  </section>
+
+  <!-- ══ GARANTÍAS ══ -->
+  <section class="garantias-section reveal">
+    <div class="section-eyebrow">La promesa</div>
+    <h2 class="section-title">Por qué <em>Aura</em></h2>
+    <div class="garantias-grid">
+      <div class="garantia-item">
+        <div class="garantia-icon">✦</div>
+        <div class="garantia-text">
+          <h3>100% Cuero Ante Real</h3>
+          <p>No sintético. No imitación. Ante premium seleccionado que envejece con carácter.</p>
+        </div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon">◈</div>
+        <div class="garantia-text">
+          <h3>Pagas cuando recibes</h3>
+          <p>Contraentrega en toda Colombia. Las ves en tu puerta. Te gustan. Ahí pagas.</p>
+        </div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon">◎</div>
+        <div class="garantia-text">
+          <h3>3-4 días a tu puerta</h3>
+          <p>Envío rápido a toda Colombia. Desde Bogotá 2-3 días. Con número de guía.</p>
+        </div>
+      </div>
+      <div class="garantia-item">
+        <div class="garantia-icon">◇</div>
+        <div class="garantia-text">
+          <h3>Unisex tallas 34 – 44</h3>
+          <p>Diseñadas para todos. Sin límites de género ni de estilo personal.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TESTIMONIOS ══ -->
+  <section class="testimonios-section reveal">
+    <div style="text-align:center">
+      <div class="section-eyebrow">Quienes ya las viven</div>
+      <h2 class="section-title">El <em>Aura</em> que dejan.</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Las pedí en Negro. Cuando las abrí entendí por qué se llaman Aura. El cuero tiene algo que no se puede describir — hay que sentirlo."</p>
+        <div class="testi-autor">Valeria M.</div>
+        <div class="testi-ciudad">Medellín</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Pedí 2 pares — Café y Mostaza. Los 2 perfectos, en 3 días. Y pagué cuando llegaron. Nunca tan fácil comprar algo así de bueno."</p>
+        <div class="testi-autor">Daniela R.</div>
+        <div class="testi-ciudad">Cali</div>
+      </div>
+      <div class="testi">
+        <div class="testi-stars">★★★★★</div>
+        <p class="testi-text">"Soy hombre y las Kaki me sorprendieron. La talla perfecta, el cuero real, y el precio que no encuentras en ningún lado."</p>
+        <div class="testi-autor">Sebastián C.</div>
+        <div class="testi-ciudad">Bogotá</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ FORMULARIO ══ -->
+  <section class="pedido-section" id="pedir">
+    <div style="text-align:center" class="reveal">
+      <div class="section-eyebrow">El pedido</div>
+      <h2 class="section-title">Hazla <em>tuya.</em></h2>
+      <p class="section-body" style="margin-bottom:0">Completa y recibes confirmación inmediata por WhatsApp.</p>
+    </div>
+
+    <div class="form-wrap reveal">
+      <!-- RESUMEN -->
+      <div class="resumen" id="resumen">
+        <div class="resumen-titulo">✦ Resumen del pedido</div>
+        <div class="res-row" id="res-cant"><span>Cantidad</span><span>—</span></div>
+        <div class="res-row" id="res-c1"><span>Color 1</span><span>—</span></div>
+        <div class="res-row" id="res-c2" style="display:none"><span>Color 2</span><span>—</span></div>
+        <div class="res-row" id="res-t1"><span>Talla 1</span><span>—</span></div>
+        <div class="res-row" id="res-t2" style="display:none"><span>Talla 2</span><span>—</span></div>
+        <div class="res-row tot" id="res-total"><span>Total contraentrega</span><span>—</span></div>
+      </div>
+
+      <!-- CANTIDAD -->
+      <div class="form-group" id="fg-cant">
+        <label>¿Cuántos pares? <span>*</span></label>
+        <div class="sel-wrap">
+          <select id="cantidad" onchange="updRes()">
+            <option value="">Selecciona...</option>
+            <option value="1">1 par — $140.000</option>
+            <option value="2">2 pares — $270.000 (ahorra $10.000)</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona la cantidad</div>
+      </div>
+
+      <!-- COLOR 1 -->
+      <div class="form-group" id="fg-c1">
+        <label>Color <span>*</span></label>
+        <div class="sel-wrap">
+          <select id="color1" onchange="updRes()">
+            <option value="">Selecciona color...</option>
+            <option>Negro</option><option>Gris</option>
+            <option>Café</option><option>Kaki</option><option>Mostaza</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona un color</div>
+      </div>
+
+      <!-- COLOR 2 -->
+      <div class="form-group" id="fg-c2" style="display:none">
+        <label>Color 2do par <span>*</span></label>
+        <div class="sel-wrap">
+          <select id="color2" onchange="updRes()">
+            <option value="">Selecciona color...</option>
+            <option>Negro</option><option>Gris</option>
+            <option>Café</option><option>Kaki</option><option>Mostaza</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona el color del 2do par</div>
+      </div>
+
+      <!-- TALLAS -->
+      <div class="form-row">
+        <div class="form-group" id="fg-t1">
+          <label>Talla 1 <span>*</span></label>
+          <div class="sel-wrap">
+            <select id="talla1" onchange="updRes()">
+              <option value="">Talla...</option>
+              <option>34</option><option>35</option><option>36</option>
+              <option>37</option><option>38</option><option>39</option>
+              <option>40</option><option>41</option><option>42</option>
+              <option>43</option><option>44</option>
+            </select>
+          </div>
+          <div class="field-error">Selecciona talla</div>
+        </div>
+        <div class="form-group" id="fg-t2" style="display:none">
+          <label>Talla 2 <span>*</span></label>
+          <div class="sel-wrap">
+            <select id="talla2" onchange="updRes()">
+              <option value="">Talla...</option>
+              <option>34</option><option>35</option><option>36</option>
+              <option>37</option><option>38</option><option>39</option>
+              <option>40</option><option>41</option><option>42</option>
+              <option>43</option><option>44</option>
+            </select>
+          </div>
+          <div class="field-error">Selecciona talla</div>
+        </div>
+      </div>
+
+      <!-- DATOS -->
+      <div class="form-group" id="fg-nom">
+        <label>Nombre completo <span>*</span></label>
+        <input id="nombre" type="text" placeholder="Ej: Laura Martínez" autocomplete="name"/>
+        <div class="field-error">Ingresa tu nombre</div>
+      </div>
+      <div class="form-group" id="fg-tel">
+        <label>Celular <span>*</span></label>
+        <input id="telefono" type="tel" placeholder="Ej: 3001234567" inputmode="numeric" maxlength="10"/>
+        <div class="field-error">Ingresa tu celular (10 dígitos)</div>
+      </div>
+      <div class="form-group" id="fg-ciu">
+        <label>Ciudad <span>*</span></label>
+        <input id="ciudad" type="text" placeholder="Ej: Bogotá, Medellín, Cali..." autocomplete="address-level2"/>
+        <div class="field-error">Ingresa tu ciudad</div>
+      </div>
+      <div class="form-group" id="fg-dir">
+        <label>Dirección de entrega <span>*</span></label>
+        <textarea id="direccion" rows="3" placeholder="Ej: Calle 80 #45-12, Apto 301, Barrio Los Pinos"></textarea>
+        <div class="field-error">Ingresa la dirección completa</div>
+      </div>
+
+      <button class="btn-order" onclick="enviar()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#080806"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Confirmar pedido Aura
+      </button>
+      <p class="form-nota">Abrirás WhatsApp con tu pedido listo.<br/><strong>Pagas solo cuando recibes.</strong></p>
+    </div>
+  </section>
+
+  <!-- ══ CTA FINAL ══ -->
+  <section class="cta-section reveal">
+    <div class="section-eyebrow">¿Sientes el llamado?</div>
+    <h2 class="section-title">Tu <em>Aura</em><br/>te espera.</h2>
+    <p class="cta-sub-text">Sin tarjeta. Sin riesgo. Solo cuero real en tu puerta.</p>
+    <a class="btn-gold" href="#pedir" style="margin:0 auto">
+      Quiero mis Aura
+    </a>
+  </section>
+
+  <footer>
+    <div class="footer-logo">Umbrella <span>Footwear</span></div>
+    <div class="footer-text">Colombia · umbrellafootwear12@gmail.com · +57 333 282 6196</div>
+  </footer>
+
+  <div class="spacer"></div>
+
+  <!-- FLOTANTE -->
+  <a class="wa-float" href="#pedir" aria-label="Pedido">
+    <div class="wa-pulse"></div>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <!-- STICKY -->
+  <div class="sticky">
+    <div class="sticky-p">
+      <strong>$270.000</strong>
+      <span>2 pares Aura</span>
+    </div>
+    <a class="sticky-btn" href="#pedir" onclick="fbq('track','InitiateCheckout')">
+      Pedir Aura
+    </a>
+  </div>
+
+  <script>
+    var P = {1:140000,2:270000};
+    function cop(n){return '$'+n.toLocaleString('es-CO')+' COP'}
+    function show(id,v){var e=document.getElementById(id);if(e)e.style.display=v?'':'none'}
+    function setVal(id,v){var e=document.getElementById(id);if(e)e.querySelector('span:last-child').textContent=v}
+    function err(id,b){var e=document.getElementById(id);if(!e)return;b?e.classList.add('error'):e.classList.remove('error')}
+
+    function updRes(){
+      var q=document.getElementById('cantidad').value;
+      var c1=document.getElementById('color1').value;
+      var c2=document.getElementById('color2').value;
+      var t1=document.getElementById('talla1').value;
+      var t2=document.getElementById('talla2').value;
+      var d=(q==='2');
+      show('fg-c2',d);show('fg-t2',d);show('res-c2',d);show('res-t2',d);
+      document.querySelector('#res-c1 span:first-child').textContent=d?'Color 1':'Color';
+      document.querySelector('#res-t1 span:first-child').textContent=d?'Talla 1':'Talla';
+      setVal('res-cant',q?(q+(q==='1'?' par':' pares')):'—');
+      setVal('res-c1',c1||'—');setVal('res-c2',c2||'—');
+      setVal('res-t1',t1?'Talla '+t1:'—');setVal('res-t2',t2?'Talla '+t2:'—');
+      setVal('res-total',q?cop(P[q]):'—');
+    }
+
+    function selColor(c){
+      var c1=document.getElementById('color1');
+      var q=document.getElementById('cantidad').value;
+      if(!c1.value){c1.value=c}
+      else if(q==='2'&&!document.getElementById('color2').value){document.getElementById('color2').value=c}
+      else{c1.value=c}
+      updRes();
+      document.getElementById('pedir').scrollIntoView({behavior:'smooth'});
+    }
+
+    function enviar(){
+      var q=document.getElementById('cantidad').value;
+      var c1=document.getElementById('color1').value;
+      var c2=document.getElementById('color2').value;
+      var t1=document.getElementById('talla1').value;
+      var t2=document.getElementById('talla2').value;
+      var nom=document.getElementById('nombre').value.trim();
+      var tel=document.getElementById('telefono').value.trim();
+      var ciu=document.getElementById('ciudad').value.trim();
+      var dir=document.getElementById('direccion').value.trim();
+      var d=(q==='2');
+      var ok=true;
+      err('fg-cant',!q);if(!q)ok=false;
+      err('fg-c1',!c1);if(!c1)ok=false;
+      err('fg-c2',d&&!c2);if(d&&!c2)ok=false;
+      err('fg-t1',!t1);if(!t1)ok=false;
+      err('fg-t2',d&&!t2);if(d&&!t2)ok=false;
+      err('fg-nom',!nom);if(!nom)ok=false;
+      err('fg-tel',tel.length<10);if(tel.length<10)ok=false;
+      err('fg-ciu',!ciu);if(!ciu)ok=false;
+      err('fg-dir',!dir);if(!dir)ok=false;
+      if(!ok){document.querySelector('.form-group.error').scrollIntoView({behavior:'smooth',block:'center'});return}
+      var L=[
+        '✦ *NUEVO PEDIDO — Botas Aura*','',
+        '*PRODUCTO*',
+        'Modelo: Botas Aura — 100% Cuero Ante',
+        'Cantidad: '+q+(q==='1'?' par':' pares'),
+        'Color 1: '+c1+' — Talla '+t1
+      ];
+      if(d)L.push('Color 2: '+c2+' — Talla '+t2);
+      L.push('','*CLIENTE*','Nombre: '+nom,'Celular: '+tel,'Ciudad: '+ciu,'Dirección: '+dir);
+      L.push('','*PAGO*','Modalidad: Contraentrega','Total a cobrar: '+cop(P[q]));
+      L.push('','_(Pedido vía landing Aura)_');
+      fbq('track','Purchase',{value:P[q],currency:'COP'});
+      window.open('https://wa.me/573332826196?text='+encodeURIComponent(L.join('\n')),'_blank');
+    }
+
+    // Scroll reveal
+    var obs=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')});
+    },{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+  </script>
+</body>
+</html>

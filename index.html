@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mia — Umbrella Footwear | Botas 100% Cuero Ante</title>
+  <meta name="description" content="Botas Mia unisex, 100% cuero ante. 5 colores. Pagas cuando recibes. Envío a todo Colombia." />
+
+  <!-- META PIXEL — reemplaza 1481522509925168 -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1481522509925168');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1481522509925168&ev=PageView&noscript=1"/></noscript>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Georgia', serif; background: #FAFAF8; color: #1A1A1A; line-height: 1.5; overflow-x: hidden; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --gold: #B8902A;
+      --gold-light: #D4A843;
+      --cream: #FAFAF8;
+      --dark: #1A1A1A;
+      --gray: #6B6B6B;
+      --wa: #25D366;
+      --wa-dark: #1DA851;
+      --radius: 12px;
+    }
+
+    /* TOPBAR */
+    .topbar { background: var(--dark); color: #fff; text-align: center; font-size: 13px; padding: 10px 16px; letter-spacing: 0.5px; }
+    .topbar strong { color: var(--gold-light); }
+
+    /* HEADER */
+    header { background: var(--cream); border-bottom: 1px solid #E8E4DC; padding: 16px 20px; display: flex; align-items: center; justify-content: center; }
+    .logo { font-size: 20px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--dark); }
+    .logo span { color: var(--gold); }
+
+    /* HERO */
+    .hero { background: var(--dark); color: #fff; padding: 40px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(184,144,42,0.25) 0%, transparent 70%); pointer-events: none; }
+    .hero-badge { display: inline-block; background: var(--gold); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 6px 16px; border-radius: 20px; margin-bottom: 18px; }
+    .hero-badge .badge-highlight { font-size: 15px; color: #fff; font-weight: 900; letter-spacing: 1px; }
+    .hero h1 { font-size: clamp(28px, 7vw, 44px); font-weight: 700; line-height: 1.15; margin-bottom: 12px; font-style: italic; }
+    .hero h1 em { color: var(--gold-light); font-style: italic; }
+    .hero p { font-size: 16px; color: #D0CBC0; max-width: 380px; margin: 0 auto 28px; }
+    .precio-hero { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-bottom: 28px; }
+    .precio-1par { font-size: 26px; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .precio-1par span { font-size: 20px; font-weight: 700; color: #ccc; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 2px; }
+    .precio-1par .cop { font-size: 16px; font-weight: 700; }
+    .precio-oferta .cop { font-size: 28px; font-weight: 700; }
+    .precio-label { font-size: 16px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; }
+    .precio-label strong { font-size: 20px; color: var(--gold-light); font-weight: 900; }
+    .precio-oferta { font-size: 48px; font-weight: 700; color: var(--gold-light); line-height: 1; }
+    .colores-dots { display: flex; justify-content: center; gap: 10px; margin-bottom: 28px; }
+    .dot { width: 30px; height: 30px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
+    .dot:hover, .dot.active { transform: scale(1.2); border-color: var(--gold-light); }
+    .dot-negro   { background: #1A1A1A; }
+    .dot-gris    { background: #8A8A8A; }
+    .dot-cafe    { background: #7B4F2E; }
+    .dot-kaki    { background: #8B8455; }
+    .dot-mostaza { background: #C9A84C; }
+
+    /* BOTÓN WA */
+    .btn-wa { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: var(--wa); color: #fff; font-size: 17px; font-weight: 700; padding: 16px 32px; border-radius: 50px; width: 100%; max-width: 360px; box-shadow: 0 6px 20px rgba(37,211,102,0.35); transition: background 0.2s, transform 0.15s; }
+    .btn-wa:active { background: var(--wa-dark); transform: scale(0.97); }
+    .garantia-mini { margin-top: 14px; font-size: 13px; color: #888; }
+    .garantia-mini strong { color: #bbb; }
+
+    /* SECCIONES */
+    .section { padding: 48px 20px; }
+    .section-title { text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 8px; }
+    .section-sub { text-align: center; color: var(--gray); font-size: 14px; margin-bottom: 32px; }
+
+    /* COLORES GRID */
+    .colores-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; max-width: 420px; margin: 0 auto; }
+    .color-card { border-radius: var(--radius); overflow: hidden; border: 2px solid transparent; background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,0.08); cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .color-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+    .color-swatch { height: 180px; background-size: cover; background-position: center 70%; position: relative; }
+    .color-swatch-label { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.55); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+    .swatch-negro   { background-image: url('slide-negro.jpg'); }
+    .swatch-gris    { background-image: url('slide-gris.jpg'); }
+    .swatch-cafe    { background-image: url('slide-cafe.jpg'); }
+    .swatch-kaki    { background-image: url('slide-kaki.jpg'); }
+    .swatch-mostaza { background-image: url('slide-mostaza.jpg'); }
+    .color-info { padding: 10px 12px 12px; text-align: center; }
+    .color-nombre { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
+    .color-angulo { font-size: 12px; color: var(--gray); font-style: italic; }
+    .color-card.full { grid-column: 1 / -1; }
+    .color-card.full .color-swatch { height: 160px; }
+
+    /* LIGHTBOX */
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); flex-direction: column; align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox-img { width: 100%; height: 100%; object-fit: contain; background-size: cover; background-position: center 70%; background-repeat: no-repeat; flex: 1; }
+    .lightbox-bar { width: 100%; background: var(--dark); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .lightbox-close { background: none; border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 18px; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .lightbox-btn { flex: 1; background: var(--wa); color: #fff; font-size: 15px; font-weight: 700; padding: 12px 20px; border-radius: 50px; text-align: center; cursor: pointer; border: none; }
+
+    /* OFERTA */
+    .oferta-section { background: var(--dark); color: #fff; padding: 48px 20px; text-align: center; }
+    .oferta-section .section-title { color: #fff; }
+    .oferta-section .section-sub { color: #aaa; }
+    .oferta-cards { display: flex; flex-direction: column; gap: 16px; max-width: 400px; margin: 0 auto 32px; }
+    .oferta-card { background: #2A2A2A; border: 1px solid #3A3A3A; border-radius: var(--radius); padding: 20px; position: relative; }
+    .oferta-card.destacada { border-color: var(--gold); background: #1E1A10; }
+    .badge-popular { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+    .oferta-nombre { font-size: 14px; color: #aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+    .oferta-precio { font-size: 34px; font-weight: 700; color: var(--gold-light); line-height: 1; margin-bottom: 6px; }
+    .oferta-desc { font-size: 13px; color: #888; }
+    .oferta-desc strong { color: #bbb; }
+
+    /* BENEFICIOS */
+    .beneficios-grid { display: flex; flex-direction: column; gap: 20px; max-width: 420px; margin: 0 auto; }
+    .beneficio { display: flex; gap: 16px; align-items: flex-start; }
+    .beneficio-icon { width: 48px; height: 48px; border-radius: 12px; background: #F0EBE0; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+    .beneficio-text h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .beneficio-text p { font-size: 14px; color: var(--gray); }
+
+    /* TESTIMONIOS */
+    .testimonios-section { background: #F4F0E8; padding: 48px 20px; }
+    .testimonios-grid { display: flex; flex-direction: column; gap: 16px; max-width: 420px; margin: 0 auto; }
+    .testimonio { background: #fff; border-radius: var(--radius); padding: 18px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .testimonio-stars { color: var(--gold); font-size: 16px; margin-bottom: 8px; }
+    .testimonio-texto { font-size: 14px; color: var(--dark); font-style: italic; margin-bottom: 10px; line-height: 1.6; }
+    .testimonio-autor { font-size: 13px; color: var(--gray); font-weight: 700; }
+    .testimonio-ciudad { font-size: 12px; color: #aaa; }
+
+    /* ══ FORMULARIO DE PEDIDO ══ */
+    .pedido-section {
+      background: var(--cream);
+      padding: 52px 20px;
+      border-top: 3px solid var(--gold);
+    }
+    .pedido-section .section-title { font-size: 24px; }
+    .pedido-section .section-sub { margin-bottom: 28px; }
+
+    .form-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 20px;
+      max-width: 440px;
+      margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+      border: 1px solid #E8E4DC;
+    }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--dark);
+      margin-bottom: 7px;
+    }
+    .form-group label span { color: #C0392B; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1.5px solid #DDD8CE;
+      border-radius: 10px;
+      font-size: 15px;
+      font-family: inherit;
+      color: var(--dark);
+      background: #FAFAF8;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,144,42,0.15);
+    }
+    .form-group textarea { resize: vertical; min-height: 70px; }
+
+    /* selector personalizado */
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '▾';
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 16px;
+      pointer-events: none;
+    }
+
+    /* fila de 2 columnas */
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* resumen pedido */
+    .resumen-pedido {
+      background: #F4F0E8;
+      border-radius: 10px;
+      padding: 14px 16px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+    .resumen-pedido .resumen-titulo {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+    .resumen-linea {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 4px;
+      color: var(--dark);
+    }
+    .resumen-linea.total {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid #DDD8CE;
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .resumen-linea.total span:last-child { color: var(--gold); }
+
+    /* botón enviar pedido */
+    .btn-pedido {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--wa);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 700;
+      padding: 17px 20px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+      transition: background 0.2s, transform 0.15s;
+      font-family: inherit;
+    }
+    .btn-pedido:active { background: var(--wa-dark); transform: scale(0.97); }
+
+    .form-nota {
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+
+    /* error inline */
+    .field-error {
+      color: #C0392B;
+      font-size: 12px;
+      margin-top: 5px;
+      display: none;
+    }
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+      border-color: #C0392B;
+    }
+    .form-group.error .field-error { display: block; }
+
+    /* CTA FINAL */
+    .cta-final { background: var(--dark); color: #fff; text-align: center; padding: 48px 20px 60px; }
+    .cta-final h2 { font-size: 26px; font-style: italic; margin-bottom: 10px; line-height: 1.3; }
+    .cta-final h2 em { color: var(--gold-light); }
+    .cta-final p { color: #aaa; font-size: 15px; margin-bottom: 28px; }
+    .cta-sub { margin-top: 14px; font-size: 13px; color: #666; }
+
+    /* FOOTER */
+    footer { background: #111; color: #555; text-align: center; padding: 20px; font-size: 12px; }
+    footer strong { color: #888; }
+
+    /* FLOTANTE WA */
+    .wa-float { position: fixed; bottom: 20px; right: 20px; z-index: 999; background: var(--wa); color: #fff; width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 16px rgba(37,211,102,0.5); transition: transform 0.2s; }
+    .wa-float:active { transform: scale(0.92); }
+    .wa-float-pulse { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid var(--wa); animation: pulse 2s infinite; pointer-events: none; }
+    @keyframes pulse { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(1.5); } }
+
+    /* ── BANNER SLIDER ZALANDO ── */
+    .banner-slider { position: relative; width: 100%; overflow: hidden; background: #111; touch-action: pan-y; user-select: none; }
+    .banner-track  { display: flex; transition: transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94); will-change: transform; }
+    .banner-slide  { min-width: 100%; flex-shrink: 0; position: relative; height: clamp(300px, 72vw, 580px); display: flex; align-items: flex-end; padding: clamp(24px, 5vw, 48px); }
+    .banner-slide::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 50%, transparent 100%); z-index: 1; pointer-events: none; }
+    .slide-bg { position: absolute; inset: 0; background-size: cover; background-position: center 70%; transition: transform 0.65s ease; }
+    .banner-slide:hover .slide-bg { transform: scale(1.03); }
+    .slide-negro   .slide-bg { background-image: url('slide-negro.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-gris    .slide-bg { background-image: url('slide-gris.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-cafe    .slide-bg { background-image: url('slide-cafe.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-kaki    .slide-bg { background-image: url('slide-kaki.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-mostaza .slide-bg { background-image: url('slide-mostaza.jpg'); background-size: cover; background-position: center 70%; }
+    /* shoe silhouette decorativa */
+    .slide-bg::after { content: '👢'; position: absolute; bottom: 10%; right: 8%; font-size: clamp(60px, 15vw, 120px); opacity: 0.18; filter: grayscale(1); pointer-events: none; }
+    .slide-content  { position: relative; z-index: 2; max-width: 480px; }
+    .slide-label    { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 8px; }
+    .slide-title    { font-size: clamp(24px, 6vw, 42px); font-weight: 700; color: #fff; font-style: italic; line-height: 1.1; margin-bottom: 6px; }
+    .slide-title em { color: var(--gold-light); font-style: italic; }
+    .slide-hook     { font-size: clamp(13px, 2.5vw, 16px); color: rgba(255,255,255,0.75); margin-bottom: 18px; line-height: 1.4; }
+    .slide-cta {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255,255,255,0.45); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 10px 22px; border-radius: 50px; cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      text-decoration: none;
+    }
+    .slide-cta:hover { background: rgba(255,255,255,0.28); border-color: rgba(255,255,255,0.7); }
+    /* badge de color */
+    .slide-badge { display: inline-block; width: 14px; height: 14px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.6); flex-shrink: 0; }
+    /* flechas */
+    .banner-arrow {
+      position: absolute; top: 50%; transform: translateY(-50%); z-index: 20;
+      background: rgba(255,255,255,0.12); backdrop-filter: blur(6px);
+      border: 1.5px solid rgba(255,255,255,0.3); color: #fff;
+      width: 42px; height: 42px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; font-size: 22px; line-height: 1;
+      transition: background 0.2s, border-color 0.2s;
+      -webkit-tap-highlight-color: transparent; outline: none;
+      padding: 0; border: 1.5px solid rgba(255,255,255,0.35);
+    }
+    .banner-arrow:hover { background: rgba(255,255,255,0.30); }
+    .arrow-prev { left: 14px; }
+    .arrow-next { right: 14px; }
+    /* puntos indicadores */
+    .banner-dots { position: absolute; bottom: 16px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; gap: 8px; align-items: center; }
+    .banner-dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.35); cursor: pointer; transition: background 0.25s, transform 0.25s, width 0.25s; }
+    .banner-dot.active { background: #fff; transform: scale(1.25); width: 22px; border-radius: 4px; }
+    /* barra de progreso */
+    .banner-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: var(--gold-light); z-index: 20; width: 0%; transition: width 0.1s linear; }
+
+    .bottom-spacer { height: 0; }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    Envío a todo Colombia · <strong>Pagas cuando recibes</strong> · 3-4 días
+  </div>
+
+  <header>
+    <div class="logo">Umbrella <span>Footwear</span></div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════
+       BANNER SLIDER — estilo Zalando
+  ══════════════════════════════════════════════ -->
+  <section class="banner-slider" id="bannerSlider">
+    <div class="banner-track" id="bannerTrack">
+
+      <!-- SLIDE 1: NEGRO — Estatus -->
+      <div class="banner-slide slide-negro">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <div class="slide-label">Modelo Mia · Negro</div>
+          <div class="slide-title">Tu estilo habla<br/><em>antes que tú.</em></div>
+          <div class="slide-hook">Cuero ante premium · Pagas cuando recibes</div>
+          <a class="slide-cta" href="#pedir" onclick="seleccionarColor('Negro')">
+            <span class="slide-badge" style="background:#eee;"></span>
+            Pedir Negro
+          </a>
+        </div>
+      </div>
+
+      <!-- SLIDE 2: CAFÉ — Clásico -->
+      <div class="banner-slide slide-cafe">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <div class="slide-label">Modelo Mia · Café</div>
+          <div class="slide-title">Clásico y cálido.<br/><em>Cuero real.</em></div>
+          <div class="slide-hook">100% cuero ante · Envío a todo Colombia</div>
+          <a class="slide-cta" href="#pedir" onclick="seleccionarColor('Café')">
+            <span class="slide-badge" style="background:#7B4F2E;"></span>
+            Pedir Café
+          </a>
+        </div>
+      </div>
+
+      <!-- SLIDE 3: MOSTAZA — Viaje -->
+      <div class="banner-slide slide-mostaza">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <div class="slide-label">Modelo Mia · Mostaza</div>
+          <div class="slide-title">Un viaje, un estilo.<br/><em>Tú decides el color.</em></div>
+          <div class="slide-hook">5 colores disponibles · Unisex</div>
+          <a class="slide-cta" href="#pedir" onclick="seleccionarColor('Mostaza')">
+            <span class="slide-badge" style="background:#C9A84C;"></span>
+            Pedir Mostaza
+          </a>
+        </div>
+      </div>
+
+      <!-- SLIDE 4: KAKI — Durabilidad -->
+      <div class="banner-slide slide-kaki">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <div class="slide-label">Modelo Mia · Kaki</div>
+          <div class="slide-title">Botas que duran.<br/><em>Cuero que se nota.</em></div>
+          <div class="slide-hook">$140.000 · Contraentrega</div>
+          <a class="slide-cta" href="#pedir" onclick="seleccionarColor('Kaki')">
+            <span class="slide-badge" style="background:#8B8455;"></span>
+            Pedir Kaki
+          </a>
+        </div>
+      </div>
+
+      <!-- SLIDE 5: GRIS — Oferta doble -->
+      <div class="banner-slide slide-gris">
+        <div class="slide-bg"></div>
+        <div class="slide-content">
+          <div class="slide-label">Oferta especial · 2 pares</div>
+          <div class="slide-title">Uno para ti.<br/><em>Uno para quien quieras.</em></div>
+          <div class="slide-hook">2 pares × $270.000 · Pagas al recibir</div>
+          <a class="slide-cta" href="#pedir" onclick="fbq('track','InitiateCheckout')">
+            <span class="slide-badge" style="background:#8A8A8A;"></span>
+            Ver oferta doble
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Flechas -->
+    <button class="banner-arrow arrow-prev" aria-label="Anterior" onclick="bannerPrev()">&#8249;</button>
+    <button class="banner-arrow arrow-next" aria-label="Siguiente" onclick="bannerNext()">&#8250;</button>
+
+    <!-- Dots -->
+    <div class="banner-dots" id="bannerDots">
+      <div class="banner-dot active" onclick="bannerGo(0)"></div>
+      <div class="banner-dot" onclick="bannerGo(1)"></div>
+      <div class="banner-dot" onclick="bannerGo(2)"></div>
+      <div class="banner-dot" onclick="bannerGo(3)"></div>
+      <div class="banner-dot" onclick="bannerGo(4)"></div>
+    </div>
+
+    <!-- Barra progreso -->
+    <div class="banner-progress" id="bannerProgress"></div>
+  </section>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Modelo Mia — <span class="badge-highlight">100%</span> Cuero Ante</div>
+    <h1>Tu estilo habla<br/><em>antes que tú.</em></h1>
+    <p>Botas unisex premium. 5 colores. Cuero ante real. Llegan a tu puerta.</p>
+    <div class="precio-hero">
+      <div class="precio-1par"><span>1 par</span>$140.000 <span class="cop">COP</span></div>
+      <div class="precio-label">Oferta especial — <strong>2 pares</strong></div>
+      <div class="precio-oferta">$270.000 <span class="cop">COP</span></div>
+    </div>
+    <div class="colores-dots">
+      <div class="dot dot-negro active" title="Negro"></div>
+      <div class="dot dot-gris"         title="Gris"></div>
+      <div class="dot dot-cafe"         title="Café"></div>
+      <div class="dot dot-kaki"         title="Kaki"></div>
+      <div class="dot dot-mostaza"      title="Mostaza"></div>
+    </div>
+    <a class="btn-wa" href="#pedir" onclick="fbq('track','Contact')">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      ¡Las quiero — Pedir ahora!
+    </a>
+    <div class="garantia-mini"><strong>Sin tarjeta.</strong> Pagas solo cuando recibes en casa.</div>
+  </section>
+
+  <!-- 5 COLORES -->
+  <section class="section">
+    <h2 class="section-title">Elige tu color Mia</h2>
+    <p class="section-sub">5 colores disponibles · Unisex tallas 36 – 43</p>
+    <div class="colores-grid">
+      <div class="color-card">
+        <div class="color-swatch swatch-negro" onclick="abrirLightbox('slide-negro.jpg','Negro')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-info" onclick="seleccionarColor('Negro')" style="cursor:pointer"><div class="color-nombre">Negro</div><div class="color-angulo">Estatus &amp; elegancia · <strong style="color:var(--gold)">Pedir →</strong></div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch swatch-gris" onclick="abrirLightbox('slide-gris.jpg','Gris')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-info" onclick="seleccionarColor('Gris')" style="cursor:pointer"><div class="color-nombre">Gris</div><div class="color-angulo">Versátil &amp; moderno · <strong style="color:var(--gold)">Pedir →</strong></div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch swatch-cafe" onclick="abrirLightbox('slide-cafe.jpg','Café')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-info" onclick="seleccionarColor('Café')" style="cursor:pointer"><div class="color-nombre">Café</div><div class="color-angulo">Clásico &amp; cálido · <strong style="color:var(--gold)">Pedir →</strong></div></div>
+      </div>
+      <div class="color-card">
+        <div class="color-swatch swatch-kaki" onclick="abrirLightbox('slide-kaki.jpg','Kaki')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-info" onclick="seleccionarColor('Kaki')" style="cursor:pointer"><div class="color-nombre">Kaki</div><div class="color-angulo">Aventura &amp; durabilidad · <strong style="color:var(--gold)">Pedir →</strong></div></div>
+      </div>
+      <div class="color-card full">
+        <div class="color-swatch swatch-mostaza" onclick="abrirLightbox('slide-mostaza.jpg','Mostaza')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-info" onclick="seleccionarColor('Mostaza')" style="cursor:pointer"><div class="color-nombre">Mostaza</div><div class="color-angulo">Viaje &amp; personalidad · <strong style="color:var(--gold)">Pedir →</strong></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFERTA -->
+  <section class="oferta-section">
+    <h2 class="section-title">Elige tu oferta</h2>
+    <p class="section-sub">Pagas al recibir — sin riesgo</p>
+    <div class="oferta-cards">
+      <div class="oferta-card destacada">
+        <div class="badge-popular">⭐ Más popular</div>
+        <div class="oferta-nombre">2 pares Mia</div>
+        <div class="oferta-precio">$270.000</div>
+        <div class="oferta-desc"><strong>$135.000 por par.</strong> Elige 2 colores diferentes.</div>
+      </div>
+      <div style="border-radius:12px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.5);">
+        <video id="mia-video-oferta" data-src="mia-video.mp4" muted loop playsinline style="width:100%;display:block;"></video>
+      </div>
+      <div class="oferta-card">
+        <div class="oferta-nombre">1 par Mia</div>
+        <div class="oferta-precio">$140.000</div>
+        <div class="oferta-desc"><strong>100% cuero ante.</strong> Envío incluido a toda Colombia.</div>
+      </div>
+    </div>
+    <a class="btn-wa" href="#pedir" onclick="fbq('track','InitiateCheckout')" style="margin:0 auto;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Completar pedido
+    </a>
+  </section>
+
+  <!-- BENEFICIOS -->
+  <section class="section">
+    <h2 class="section-title">¿Por qué las Mia?</h2>
+    <p class="section-sub">3 razones que hacen la diferencia</p>
+    <div class="beneficios-grid">
+      <div class="beneficio">
+        <div class="beneficio-icon">🏆</div>
+        <div class="beneficio-text"><h3>100% Cuero Ante Real</h3><p>No sintético, no combinado. Cuero ante premium que se siente desde el primer momento y dura años.</p></div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon">🛡️</div>
+        <div class="beneficio-text"><h3>Pagas cuando recibes</h3><p>Contrareembolso en toda Colombia. Las ves, te gustan y ahí sí pagas. Si no, cero problema.</p></div>
+      </div>
+      <div class="beneficio">
+        <div class="beneficio-icon">🚚</div>
+        <div class="beneficio-text"><h3>Envío a todo Colombia</h3><p>3-4 días a tu puerta. Desde Bogotá llega en 2-3 días. Rastreo incluido.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios-section">
+    <h2 class="section-title">Lo que dicen quienes ya las tienen</h2>
+    <p class="section-sub">Clientes reales de toda Colombia</p>
+    <div class="testimonios-grid">
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">"Las pedí en color Café y llegaron en 3 días perfectas. El cuero es real, se nota la calidad. Ya pedí las Negras."</p>
+        <div class="testimonio-autor">Valentina M.</div><div class="testimonio-ciudad">Medellín</div>
+      </div>
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">"Compré 2 pares para mí y para mi novio. Llegaron rápido y como en las fotos. Pagamos al recibirlas, sin estrés."</p>
+        <div class="testimonio-autor">Daniela R.</div><div class="testimonio-ciudad">Cali</div>
+      </div>
+      <div class="testimonio">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">"Llevaba meses buscando unas botas buenas sin pagar fortuna. Las Kaki me sorprendieron. Vale cada peso."</p>
+        <div class="testimonio-autor">Andrés C.</div><div class="testimonio-ciudad">Bogotá</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       FORMULARIO DE PEDIDO
+  ══════════════════════════════════════════════ -->
+  <section class="pedido-section" id="pedir">
+    <h2 class="section-title">Completa tu pedido</h2>
+    <p class="section-sub">Llena el formulario y recibes confirmación por WhatsApp</p>
+
+    <div class="form-card">
+
+      <!-- RESUMEN DINÁMICO -->
+      <div class="resumen-pedido" id="resumen">
+        <div class="resumen-titulo">Resumen del pedido</div>
+        <div class="resumen-linea"><span>Producto</span><span>Botas Mia</span></div>
+        <div class="resumen-linea" id="res-cantidad"><span>Cantidad</span><span>—</span></div>
+        <div class="resumen-linea" id="res-color1"><span>Color 1</span><span>—</span></div>
+        <div class="resumen-linea" id="res-color2" style="display:none"><span>Color 2</span><span>—</span></div>
+        <div class="resumen-linea" id="res-talla1"><span>Talla 1</span><span>—</span></div>
+        <div class="resumen-linea" id="res-talla2" style="display:none"><span>Talla 2</span><span>—</span></div>
+        <div class="resumen-linea total" id="res-total"><span>Total a pagar</span><span>—</span></div>
+      </div>
+
+      <!-- CANTIDAD -->
+      <div class="form-group" id="fg-cantidad">
+        <label>¿Cuántos pares? <span>*</span></label>
+        <div class="select-wrap">
+          <select id="cantidad" onchange="actualizarResumen()">
+            <option value="">Selecciona...</option>
+            <option value="1">1 par — $140.000</option>
+            <option value="2">2 pares — $270.000 (ahorra $10.000)</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona la cantidad</div>
+      </div>
+
+      <!-- COLOR 1 -->
+      <div class="form-group" id="fg-color1">
+        <label>Color del par <span>*</span></label>
+        <div class="select-wrap">
+          <select id="color1" onchange="actualizarResumen()">
+            <option value="">Selecciona color...</option>
+            <option value="Negro">Negro</option>
+            <option value="Gris">Gris</option>
+            <option value="Café">Café</option>
+            <option value="Kaki">Kaki</option>
+            <option value="Mostaza">Mostaza</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona un color</div>
+      </div>
+
+      <!-- COLOR 2 (solo si cantidad = 2) -->
+      <div class="form-group" id="fg-color2" style="display:none">
+        <label>Color del 2do par <span>*</span></label>
+        <div class="select-wrap">
+          <select id="color2" onchange="actualizarResumen()">
+            <option value="">Selecciona color...</option>
+            <option value="Negro">Negro</option>
+            <option value="Gris">Gris</option>
+            <option value="Café">Café</option>
+            <option value="Kaki">Kaki</option>
+            <option value="Mostaza">Mostaza</option>
+          </select>
+        </div>
+        <div class="field-error">Selecciona el color del 2do par</div>
+      </div>
+
+      <!-- TALLAS -->
+      <div class="form-row" id="fila-tallas">
+        <div class="form-group" id="fg-talla1">
+          <label>Talla par 1 <span>*</span></label>
+          <div class="select-wrap">
+            <select id="talla1" onchange="actualizarResumen()">
+              <option value="">Talla...</option>
+              <option>36</option><option>37</option><option>38</option>
+              <option>39</option><option>40</option><option>41</option>
+              <option>42</option><option>43</option>
+            </select>
+          </div>
+          <div class="field-error">Selecciona talla</div>
+        </div>
+        <div class="form-group" id="fg-talla2" style="display:none">
+          <label>Talla par 2 <span>*</span></label>
+          <div class="select-wrap">
+            <select id="talla2" onchange="actualizarResumen()">
+              <option value="">Talla...</option>
+              <option>36</option><option>37</option><option>38</option>
+              <option>39</option><option>40</option><option>41</option>
+              <option>42</option><option>43</option>
+            </select>
+          </div>
+          <div class="field-error">Selecciona talla</div>
+        </div>
+      </div>
+
+      <!-- DATOS PERSONALES -->
+      <div class="form-group" id="fg-nombre">
+        <label>Nombre completo <span>*</span></label>
+        <input type="text" id="nombre" placeholder="Ej: Laura Martínez" autocomplete="name" />
+        <div class="field-error">Ingresa tu nombre completo</div>
+      </div>
+
+      <div class="form-group" id="fg-telefono">
+        <label>Celular <span>*</span></label>
+        <input type="tel" id="telefono" placeholder="Ej: 3001234567" autocomplete="tel" inputmode="numeric" maxlength="10" />
+        <div class="field-error">Ingresa tu número de celular (10 dígitos)</div>
+      </div>
+
+      <div class="form-group" id="fg-departamento">
+        <label>Departamento <span>*</span></label>
+        <input type="text" id="departamento" placeholder="Ej: Cundinamarca, Antioquia, Valle..." autocomplete="address-level1" />
+        <div class="field-error">Ingresa tu departamento</div>
+      </div>
+
+      <div class="form-group" id="fg-ciudad">
+        <label>Ciudad <span>*</span></label>
+        <input type="text" id="ciudad" placeholder="Ej: Bogotá, Medellín, Cali..." autocomplete="address-level2" />
+        <div class="field-error">Ingresa tu ciudad</div>
+      </div>
+
+      <div class="form-group" id="fg-direccion">
+        <label>Dirección de entrega <span>*</span></label>
+        <textarea id="direccion" placeholder="Ej: Calle 80 #45-12, Apto 301, Barrio Los Pinos" rows="3" autocomplete="street-address"></textarea>
+        <div class="field-error">Ingresa la dirección completa</div>
+      </div>
+
+      <!-- BOTÓN ENVIAR -->
+      <button class="btn-pedido" onclick="enviarPedido()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Confirmar pedido por WhatsApp
+      </button>
+
+      <p class="form-nota">
+        Al confirmar, abrirás WhatsApp con tu pedido listo.<br/>
+        <strong>Pagas solo cuando recibes en tu puerta.</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta-final">
+    <h2>Llegan a tu puerta.<br/><em>Pagas si te gustan.</em></h2>
+    <p>Sin tarjeta. Sin riesgo. Solo buen calzado.</p>
+    <a class="btn-wa" href="#pedir" style="margin:0 auto;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Hacer mi pedido
+    </a>
+    <div class="cta-sub">Horario atención: Lun–Sáb 8am–8pm · +57 333 282 6196</div>
+  </section>
+
+  <footer>
+    <strong>Umbrella Footwear</strong> · Colombia · umbrellafootwear12@gmail.com<br/>
+    Botas Mia — 100% Cuero Ante · Envío contraentrega
+  </footer>
+
+  <div class="bottom-spacer"></div>
+
+  <!-- FLOTANTE WA -->
+  <a class="wa-float" href="#pedir" aria-label="Hacer pedido">
+    <div class="wa-float-pulse"></div>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </a>
+
+  <div style="display:none">
+    <a href="#pedir" onclick="fbq('track','InitiateCheckout')">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Pedir ahora
+    </a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════
+       JAVASCRIPT
+  ══════════════════════════════════════════════ -->
+  <script>
+    // Precio según cantidad
+    var PRECIOS = { '1': 140000, '2': 270000 };
+
+    function fmt(n) {
+      return '$' + n.toLocaleString('es-CO') + ' COP';
+    }
+
+    function setText(id, val) {
+      var el = document.getElementById(id);
+      if (el) el.querySelector('span:last-child').textContent = val;
+    }
+
+    function show(id, visible) {
+      var el = document.getElementById(id);
+      if (el) el.style.display = visible ? '' : 'none';
+    }
+
+    function actualizarResumen() {
+      var cant     = document.getElementById('cantidad').value;
+      var color1   = document.getElementById('color1').value;
+      var color2   = document.getElementById('color2').value;
+      var talla1   = document.getElementById('talla1').value;
+      var talla2   = document.getElementById('talla2').value;
+      var esDos    = cant === '2';
+
+      // mostrar/ocultar campos del 2do par
+      show('fg-color2', esDos);
+      show('fg-talla2', esDos);
+      show('res-color2', esDos);
+      show('res-talla2', esDos);
+
+      // etiqueta del primer color/talla
+      var label1 = esDos ? 'Color par 1' : 'Color';
+      var labelT1 = esDos ? 'Talla par 1' : 'Talla';
+      document.querySelector('#res-color1 span:first-child').textContent = label1;
+      document.querySelector('#res-talla1 span:first-child').textContent = labelT1;
+
+      // resumen
+      setText('res-cantidad', cant ? (cant + (cant === '1' ? ' par' : ' pares')) : '—');
+      setText('res-color1',   color1 || '—');
+      setText('res-color2',   color2 || '—');
+      setText('res-talla1',   talla1 ? 'Talla ' + talla1 : '—');
+      setText('res-talla2',   talla2 ? 'Talla ' + talla2 : '—');
+      setText('res-total',    cant ? fmt(PRECIOS[cant]) : '—');
+    }
+
+    // Carga los videos solo cuando entran al viewport
+    (function() {
+      ['mia-video-oferta'].forEach(function(id) {
+        var video = document.getElementById(id);
+        if (!video) return;
+        var obs = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) {
+            video.src = video.dataset.src;
+            video.play();
+            obs.disconnect();
+          }
+        }, { threshold: 0.25 });
+        obs.observe(video);
+      });
+    })();
+
+    function abrirLightbox(img, color) {
+      var lb = document.getElementById('lightbox');
+      lb.style.backgroundImage = "url('" + img + "')";
+      lb.dataset.color = color;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function cerrarLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    function pedirDesdeLightbox() {
+      var color = document.getElementById('lightbox').dataset.color;
+      cerrarLightbox();
+      seleccionarColor(color);
+    }
+
+    // Llamado desde las tarjetas de color
+    function seleccionarColor(color) {
+      var c1 = document.getElementById('color1');
+      var cant = document.getElementById('cantidad').value;
+
+      if (!c1.value) {
+        c1.value = color;
+      } else if (cant === '2' && !document.getElementById('color2').value) {
+        document.getElementById('color2').value = color;
+      } else {
+        c1.value = color;
+      }
+
+      actualizarResumen();
+      document.getElementById('pedir').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function setError(id, hasError) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      if (hasError) el.classList.add('error');
+      else          el.classList.remove('error');
+    }
+
+    function enviarPedido() {
+      var cant      = document.getElementById('cantidad').value;
+      var color1    = document.getElementById('color1').value;
+      var color2    = document.getElementById('color2').value;
+      var talla1    = document.getElementById('talla1').value;
+      var talla2    = document.getElementById('talla2').value;
+      var nombre    = document.getElementById('nombre').value.trim();
+      var telefono  = document.getElementById('telefono').value.trim();
+      var departamento = document.getElementById('departamento').value.trim();
+      var ciudad    = document.getElementById('ciudad').value.trim();
+      var direccion = document.getElementById('direccion').value.trim();
+      var esDos     = cant === '2';
+
+      // Validación
+      var ok = true;
+      setError('fg-cantidad',  !cant);           if (!cant)      ok = false;
+      setError('fg-color1',    !color1);          if (!color1)    ok = false;
+      setError('fg-color2',    esDos && !color2); if (esDos && !color2) ok = false;
+      setError('fg-talla1',    !talla1);          if (!talla1)    ok = false;
+      setError('fg-talla2',    esDos && !talla2); if (esDos && !talla2) ok = false;
+      setError('fg-nombre',    !nombre);          if (!nombre)    ok = false;
+      setError('fg-telefono',  telefono.length < 10); if (telefono.length < 10) ok = false;
+      setError('fg-departamento', !departamento); if (!departamento) ok = false;
+      setError('fg-ciudad',    !ciudad);          if (!ciudad)    ok = false;
+      setError('fg-direccion', !direccion);       if (!direccion) ok = false;
+
+      if (!ok) {
+        document.querySelector('.form-group.error').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      // Armar el mensaje para Dropi
+      var precio = fmt(PRECIOS[cant]);
+      var lineas = [];
+      lineas.push('🛍️ *NUEVO PEDIDO — Botas Mia*');
+      lineas.push('');
+      lineas.push('*PRODUCTO*');
+      lineas.push('Modelo: Botas Mia — 100% Cuero Ante');
+      lineas.push('Cantidad: ' + cant + (cant === '1' ? ' par' : ' pares'));
+      lineas.push('Color 1: ' + color1 + ' — Talla ' + talla1);
+      if (esDos) lineas.push('Color 2: ' + color2 + ' — Talla ' + talla2);
+      lineas.push('');
+      lineas.push('*CLIENTE*');
+      lineas.push('Nombre: ' + nombre);
+      lineas.push('Celular: ' + telefono);
+      lineas.push('Departamento: ' + departamento);
+      lineas.push('Ciudad: ' + ciudad);
+      lineas.push('Dirección: ' + direccion);
+      lineas.push('');
+      lineas.push('*PAGO*');
+      lineas.push('Modalidad: Contraentrega');
+      lineas.push('Total a cobrar: ' + precio);
+      lineas.push('');
+      lineas.push('_(Pedido vía landing Mia)_');
+
+      var mensaje = lineas.join('\n');
+
+      fbq('track', 'Purchase', { value: PRECIOS[cant], currency: 'COP' });
+
+      window.open('https://wa.me/573332826196?text=' + encodeURIComponent(mensaje), '_blank');
+    }
+
+    // ── BANNER SLIDER ──────────────────────────────
+    (function () {
+      var current  = 0;
+      var total    = 5;
+      var interval = 5000;
+      var timer, progTimer, progStart, progEl;
+
+      function updateSlider() {
+        document.getElementById('bannerTrack').style.transform =
+          'translateX(-' + (current * 100) + '%)';
+        document.querySelectorAll('.banner-dot').forEach(function (d, i) {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      function startProgress() {
+        if (progTimer) clearInterval(progTimer);
+        progEl = document.getElementById('bannerProgress');
+        progEl.style.transition = 'none';
+        progEl.style.width = '0%';
+        progStart = Date.now();
+        var step = 50;
+        progTimer = setInterval(function () {
+          var pct = Math.min(100, ((Date.now() - progStart) / interval) * 100);
+          progEl.style.transition = 'none';
+          progEl.style.width = pct + '%';
+          if (pct >= 100) clearInterval(progTimer);
+        }, step);
+      }
+
+      function resetTimer() {
+        clearInterval(timer);
+        startProgress();
+        timer = setInterval(function () { goNext(); }, interval);
+      }
+
+      function goNext() { current = (current + 1) % total; updateSlider(); startProgress(); }
+      function goPrev() { current = (current - 1 + total) % total; updateSlider(); resetTimer(); }
+      function goTo(n)  { current = n; updateSlider(); resetTimer(); }
+
+      window.bannerNext = function () { goNext(); resetTimer(); };
+      window.bannerPrev = goPrev;
+      window.bannerGo   = goTo;
+
+      // Swipe táctil
+      var touchStartX = 0;
+      var sliderEl = document.getElementById('bannerSlider');
+      sliderEl.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+      }, { passive: true });
+      sliderEl.addEventListener('touchend', function (e) {
+        var dx = e.changedTouches[0].clientX - touchStartX;
+        if (Math.abs(dx) > 45) { dx < 0 ? window.bannerNext() : goPrev(); }
+      });
+
+      // Pausa al hover (escritorio)
+      sliderEl.addEventListener('mouseenter', function () { clearInterval(timer); clearInterval(progTimer); });
+      sliderEl.addEventListener('mouseleave', resetTimer);
+
+      // Teclado
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft')  goPrev();
+        if (e.key === 'ArrowRight') window.bannerNext();
+      });
+
+      resetTimer();
+    })();
+  </script>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()" style="background-size:cover;background-position:center 70%;background-repeat:no-repeat;">
+    <div class="lightbox-bar" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
+      <button class="lightbox-btn" onclick="pedirDesdeLightbox()">🛍️ Pedir este color</button>
+    </div>
+  </div>
+
+</body>
+</html>
