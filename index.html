@@ -88,11 +88,11 @@
     .color-card:hover { border-color: var(--gold); transform: translateY(-3px); }
     .color-swatch { height: 180px; background-size: cover; background-position: center 70%; position: relative; }
     .color-swatch-label { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.55); color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
-    .swatch-negro   { background-image: url('slide-negro.png'); }
-    .swatch-gris    { background-image: url('slide-gris.png'); }
-    .swatch-cafe    { background-image: url('slide-cafe.png'); }
-    .swatch-kaki    { background-image: url('slide-kaki.png'); }
-    .swatch-mostaza { background-image: url('slide-mostaza.png'); }
+    .swatch-negro   { background-image: url('slide-negro.jpg'); }
+    .swatch-gris    { background-image: url('slide-gris.jpg'); }
+    .swatch-cafe    { background-image: url('slide-cafe.jpg'); }
+    .swatch-kaki    { background-image: url('slide-kaki.jpg'); }
+    .swatch-mostaza { background-image: url('slide-mostaza.jpg'); }
     .color-info { padding: 10px 12px 12px; text-align: center; }
     .color-nombre { font-size: 14px; font-weight: 700; margin-bottom: 3px; }
     .color-angulo { font-size: 12px; color: var(--gray); font-style: italic; }
@@ -100,9 +100,10 @@
     .color-card.full .color-swatch { height: 160px; }
 
     /* LIGHTBOX */
-    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); flex-direction: column; align-items: center; justify-content: center; }
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.85); flex-direction: column; align-items: center; justify-content: center; padding: 24px 20px; }
     .lightbox.open { display: flex; }
-    .lightbox-img { width: 100%; height: 100%; object-fit: contain; background-size: cover; background-position: center 70%; background-repeat: no-repeat; flex: 1; }
+    .lightbox-card { background: #111; border-radius: 20px; overflow: hidden; max-width: 380px; width: 100%; }
+    .lightbox-img { width: 100%; height: 260px; object-fit: cover; object-position: center 70%; display: block; }
     .lightbox-bar { width: 100%; background: var(--dark); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
     .lightbox-close { background: none; border: 1px solid rgba(255,255,255,0.3); color: #fff; font-size: 18px; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .lightbox-btn { flex: 1; background: var(--wa); color: #fff; font-size: 15px; font-weight: 700; padding: 12px 20px; border-radius: 50px; text-align: center; cursor: pointer; border: none; }
@@ -308,11 +309,11 @@
     .banner-slide::before { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 50%, transparent 100%); z-index: 1; pointer-events: none; }
     .slide-bg { position: absolute; inset: 0; background-size: cover; background-position: center 70%; transition: transform 0.65s ease; }
     .banner-slide:hover .slide-bg { transform: scale(1.03); }
-    .slide-negro   .slide-bg { background-image: url('slide-negro.png'); background-size: cover; background-position: center 70%; }
-    .slide-gris    .slide-bg { background-image: url('slide-gris.png'); background-size: cover; background-position: center 70%; }
-    .slide-cafe    .slide-bg { background-image: url('slide-cafe.png'); background-size: cover; background-position: center 70%; }
-    .slide-kaki    .slide-bg { background-image: url('slide-kaki.png'); background-size: cover; background-position: center 70%; }
-    .slide-mostaza .slide-bg { background-image: url('slide-mostaza.png'); background-size: cover; background-position: center 70%; }
+    .slide-negro   .slide-bg { background-image: url('slide-negro.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-gris    .slide-bg { background-image: url('slide-gris.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-cafe    .slide-bg { background-image: url('slide-cafe.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-kaki    .slide-bg { background-image: url('slide-kaki.jpg'); background-size: cover; background-position: center 70%; }
+    .slide-mostaza .slide-bg { background-image: url('slide-mostaza.jpg'); background-size: cover; background-position: center 70%; }
     /* shoe silhouette decorativa */
     .slide-bg::after { content: '👢'; position: absolute; bottom: 10%; right: 8%; font-size: clamp(60px, 15vw, 120px); opacity: 0.18; filter: grayscale(1); pointer-events: none; }
     .slide-content  { position: relative; z-index: 2; max-width: 480px; }
@@ -492,23 +493,23 @@
     <p class="section-sub">5 colores disponibles · Unisex tallas 36 – 43</p>
     <div class="colores-grid">
       <div class="color-card">
-        <div class="color-swatch swatch-negro" onclick="abrirLightbox('slide-negro.png','Negro')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-swatch swatch-negro" onclick="abrirLightbox('slide-negro.jpg','Negro')"><span class="color-swatch-label">Ver foto</span></div>
         <div class="color-info" onclick="seleccionarColor('Negro')" style="cursor:pointer"><div class="color-nombre">Negro</div><div class="color-angulo">Estatus &amp; elegancia · <strong style="color:var(--gold)">Pedir →</strong></div></div>
       </div>
       <div class="color-card">
-        <div class="color-swatch swatch-gris" onclick="abrirLightbox('slide-gris.png','Gris')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-swatch swatch-gris" onclick="abrirLightbox('slide-gris.jpg','Gris')"><span class="color-swatch-label">Ver foto</span></div>
         <div class="color-info" onclick="seleccionarColor('Gris')" style="cursor:pointer"><div class="color-nombre">Gris</div><div class="color-angulo">Versátil &amp; moderno · <strong style="color:var(--gold)">Pedir →</strong></div></div>
       </div>
       <div class="color-card">
-        <div class="color-swatch swatch-cafe" onclick="abrirLightbox('slide-cafe.png','Café')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-swatch swatch-cafe" onclick="abrirLightbox('slide-cafe.jpg','Café')"><span class="color-swatch-label">Ver foto</span></div>
         <div class="color-info" onclick="seleccionarColor('Café')" style="cursor:pointer"><div class="color-nombre">Café</div><div class="color-angulo">Clásico &amp; cálido · <strong style="color:var(--gold)">Pedir →</strong></div></div>
       </div>
       <div class="color-card">
-        <div class="color-swatch swatch-kaki" onclick="abrirLightbox('slide-kaki.png','Kaki')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-swatch swatch-kaki" onclick="abrirLightbox('slide-kaki.jpg','Kaki')"><span class="color-swatch-label">Ver foto</span></div>
         <div class="color-info" onclick="seleccionarColor('Kaki')" style="cursor:pointer"><div class="color-nombre">Kaki</div><div class="color-angulo">Aventura &amp; durabilidad · <strong style="color:var(--gold)">Pedir →</strong></div></div>
       </div>
       <div class="color-card full">
-        <div class="color-swatch swatch-mostaza" onclick="abrirLightbox('slide-mostaza.png','Mostaza')"><span class="color-swatch-label">Ver foto</span></div>
+        <div class="color-swatch swatch-mostaza" onclick="abrirLightbox('slide-mostaza.jpg','Mostaza')"><span class="color-swatch-label">Ver foto</span></div>
         <div class="color-info" onclick="seleccionarColor('Mostaza')" style="cursor:pointer"><div class="color-nombre">Mostaza</div><div class="color-angulo">Viaje &amp; personalidad · <strong style="color:var(--gold)">Pedir →</strong></div></div>
       </div>
     </div>
@@ -821,7 +822,7 @@
 
     function abrirLightbox(img, color) {
       var lb = document.getElementById('lightbox');
-      lb.style.backgroundImage = "url('" + img + "')";
+      document.getElementById('lightbox-img').src = img;
       lb.dataset.color = color;
       lb.classList.add('open');
       document.body.style.overflow = 'hidden';
@@ -992,10 +993,13 @@
   </script>
 
   <!-- LIGHTBOX MODAL -->
-  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()" style="background-size:cover;background-position:center 70%;background-repeat:no-repeat;">
-    <div class="lightbox-bar" onclick="event.stopPropagation()">
-      <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
-      <button class="lightbox-btn" onclick="pedirDesdeLightbox()">🛍️ Pedir este color</button>
+  <div id="lightbox" class="lightbox" onclick="cerrarLightbox()">
+    <div class="lightbox-card" onclick="event.stopPropagation()">
+      <img id="lightbox-img" class="lightbox-img" src="" alt="Bota Mia" />
+      <div class="lightbox-bar">
+        <button class="lightbox-close" onclick="cerrarLightbox()">✕</button>
+        <button class="lightbox-btn" onclick="pedirDesdeLightbox()">🛍️ Pedir este color</button>
+      </div>
     </div>
   </div>
 
